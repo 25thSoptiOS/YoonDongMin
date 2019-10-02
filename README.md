@@ -25,8 +25,6 @@ profileImage.layer.masksToBounds = false // 위와 똑같은 내용
 
 <img src="image/firstAssignment2.gif" height="500px"/><img src="image/firstAssignment1.gif" height="500px"/>
 
-​                         <아이폰 8+>                                              <아이폰 11>
-
 
 
 
