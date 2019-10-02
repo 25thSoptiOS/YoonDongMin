@@ -23,7 +23,7 @@ profileImage.layer.masksToBounds = false // 위와 똑같은 내용
 
 **실행화면**
 
-<img src="image/firstAssignment2.gif" height="500px"/><img src="image/firstAssignment1.gif" height="500px"/>
+![screen](./image/firstAssignment1.gif)
 
 
 
