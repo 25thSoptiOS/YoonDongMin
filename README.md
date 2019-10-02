@@ -23,7 +23,9 @@ profileImage.layer.masksToBounds = false // 위와 똑같은 내용
 
 **실행화면**
 
-![screen](./image/firstAssignment1.gif)
+<img src="./Image/firstAssignment1.gif" height="500px"/><img src="./Image/firstAssignment2.gif" height="500px"/>
+
+
 
 
 
