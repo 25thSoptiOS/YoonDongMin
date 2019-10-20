@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var idTopContraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +45,11 @@ extension ViewController: UITextFieldDelegate {
     }
     
     @objc func upKeyboard() {
-        self.view.frame.origin.y = -150
+        idTopContraint.constant -= 110
     }
     
     @objc func downKeyboard() {
-        self.view.frame.origin.y = 0
+        idTopContraint.constant += 110
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
