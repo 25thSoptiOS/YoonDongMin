@@ -89,5 +89,48 @@ private func addKeyboardObserver() {
 
 
 
+4. Calculator
+
+* Custom View 만들어서 사용하기
+
+```swift
+class InputView: UIView {
+  // Interface Builder를 이용하여 사용할 때, 호출되는 init
+  override init(frame: CGRect) {
+  	super.init(frame: frame)
+    initailView()
+  }
+  
+  // 코드를 통해 View를 만들 때, 호출되는 init
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    initalView()
+  }
+  
+  private func initailView() {
+    // inputView 이름을 가진 class를 IB로 load해오는 코드
+    guard let view = Bundle.main.loadNibNamed(NibNames.inputView, owner: self, options: nil)?.first as? UIView else { return }
+    view.frame = self.bounds
+    self.addSubview(view)
+	}
+}
+```
+
+
+
+**실행화면**
+
+<img src="./Image/secondAssignment1.png" height="400px"/><img src="./Image/secondAssignment2.png" height="400px"/>
+
+<img src="./Image/secondAssignment3.gif" height="400px"/>
+
+
+
+
+
+
+
+
+
 
 

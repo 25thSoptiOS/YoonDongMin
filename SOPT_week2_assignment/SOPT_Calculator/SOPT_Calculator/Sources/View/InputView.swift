@@ -16,16 +16,7 @@ extension UIView {
 }
 
 extension NSNotification.Name {
-    static let clickedZero = NSNotification.Name("clickedZero")
-    static let clickedOne = NSNotification.Name("clickedOne")
-    static let clickedTwo = NSNotification.Name("clickedTwo")
-    static let clickedThree = NSNotification.Name("clickedThree")
-    static let clickedFour = NSNotification.Name("clickedFour")
-    static let clickedFive = NSNotification.Name("clickedFive")
-    static let clickedSix = NSNotification.Name("clickedSix")
-    static let clickedSeven = NSNotification.Name("clickedSeven")
-    static let clickedEight = NSNotification.Name("clickedEight")
-    static let clickedNine = NSNotification.Name("clickedNine")
+    static let pressNumber = NSNotification.Name("pressNumber")
 }
 
 class InputView: UIView {
@@ -67,18 +58,13 @@ class InputView: UIView {
     
     @IBAction func clickNumbers(_ sender: Any) {
         guard let anyButton = sender as? UIButton else { return }
-        switch anyButton {
-        case numberButtons[0]: NotificationCenter.default.post(name: .clickedZero, object: nil)
-        case numberButtons[1]: NotificationCenter.default.post(name: .clickedOne, object: nil)
-        case numberButtons[2]: NotificationCenter.default.post(name: .clickedTwo, object: nil)
-        case numberButtons[3]: NotificationCenter.default.post(name: .clickedThree, object: nil)
-        case numberButtons[4]: NotificationCenter.default.post(name: .clickedFour, object: nil)
-        case numberButtons[5]: NotificationCenter.default.post(name: .clickedFive, object: nil)
-        case numberButtons[6]: NotificationCenter.default.post(name: .clickedSix, object: nil)
-        case numberButtons[7]: NotificationCenter.default.post(name: .clickedSeven, object: nil)
-        case numberButtons[8]: NotificationCenter.default.post(name: .clickedEight, object: nil)
-        case numberButtons[9]: NotificationCenter.default.post(name: .clickedNine, object: nil)
-        default: return
+        var pressedValue: Int = 0
+        for index in 0..<numberButtons.count {
+            if anyButton == numberButtons[index] {
+                pressedValue = index
+                break
+            }
         }
+        NotificationCenter.default.post(name: .pressNumber, object: nil, userInfo: ["pressedValue": pressedValue])
     }
 }

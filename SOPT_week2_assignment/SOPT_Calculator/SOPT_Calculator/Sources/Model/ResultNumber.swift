@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct ResultNumber {
-    private var totalNumber: Int
+class ResultNumber {
+    private var totalNumber: String
     
     init() {
-        totalNumber = 0
+        totalNumber = ""
+    }
+    
+    func setTotal(number: String) {
+        totalNumber += number
+    }
+    
+    func access(form: (String) -> Void) {
+        form(totalNumber)
     }
 }

@@ -18,60 +18,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         addButtonObserver()
     }
-    
-    private func addButtonObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(addZero), name: .clickedZero, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addOne), name: .clickedOne, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addTwo), name: .clickedTwo, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addThree), name: .clickedThree, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addFour), name: .clickedFour, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addFive), name: .clickedFive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addSix), name: .clickedSix, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addSeven), name: .clickedSeven, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addEight), name: .clickedEight, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(addNine), name: .clickedNine, object: nil)
-    }
 }
 
 extension ViewController {
-    @objc func addZero() {
-        print("0")
+    private func addButtonObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(setLabelPressValue(_:)), name: .pressNumber, object: nil)
     }
     
-    @objc func addOne() {
-        print("1")
-    }
-    
-    @objc func addTwo() {
-        print("2")
-    }
-    
-    @objc func addThree() {
-        print("3")
-    }
-    
-    @objc func addFour() {
-        print("4")
-    }
-    
-    @objc func addFive() {
-        print("5")
-    }
-    
-    @objc func addSix() {
-        print("6")
-    }
-    
-    @objc func addSeven() {
-        
-    }
-    
-    @objc func addEight() {
-        
-    }
-    
-    @objc func addNine() {
-        
+    @objc func setLabelPressValue(_ notification: NSNotification) {
+        guard let pressedValue = notification.userInfo?["pressedValue"] else { return }
+        resultNumber.setTotal(number: "\(pressedValue)")
+        resultNumber.access { totalValue in
+            self.resultLabel.text = totalValue
+        }
     }
 }
 
