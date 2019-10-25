@@ -45,7 +45,8 @@ extension ViewController: UITextFieldDelegate {
     }
     
     @objc func upKeyboard() {
-        self.view.frame.origin.y = -160
+        self.view.frame.origin.y = CGFloat(-UtilValue.keyboardHeight)
+        
     }
     
     @objc func downKeyboard() {

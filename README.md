@@ -71,11 +71,11 @@ private func addKeyboardObserver() {
   // UIResponder.keyboardWillShowNotification에 해당하는 이벤트 발생 시 작동
   NotificationCenter.default.addObserver(self, selector: #selector(upKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
   // UIResponder.keyboardDidHideNotification에 해당하는 이벤트 발생 시 작동
-  NotificationCenter.default.addObserver(self, selector: #selector(downKeyboard), name: UIResponder.keyboardDidHideNotification, object: nil)
+  NotificationCenter.default.addObserver(self, selector: #selector(downKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
 }
 
 @objc func upKeyboard() {
-  self.view.frame.origin.y = -150
+  self.view.frame.origin.y = UtilValue.keyboardHeight
 }
 
 @objc func downKeyboard() {
