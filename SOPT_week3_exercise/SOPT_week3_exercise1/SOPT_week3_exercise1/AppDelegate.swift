@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SOPT_week3_exercise3
+//  SOPT_week3_exercise1
 //
-//  Created by 윤동민 on 2019/10/12.
+//  Created by 윤동민 on 2019/10/26.
 //  Copyright © 2019 윤동민. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var bannerList: [Banner] = []
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
