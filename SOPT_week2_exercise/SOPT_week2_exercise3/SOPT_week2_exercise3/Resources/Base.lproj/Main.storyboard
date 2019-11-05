@@ -100,6 +100,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPB-P9-hvW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-Y0-TXO">
                                         <rect key="frame" x="181" y="359" width="52" height="30"/>
@@ -160,7 +163,7 @@
         <!--Main View Controller-->
         <scene sceneID="VdN-M7-nQT">
             <objects>
-                <viewController id="TxB-pd-ZII" customClass="MainViewController" customModule="SOPT_week2_exercise3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main1" id="TxB-pd-ZII" customClass="MainViewController" customModule="SOPT_week2_exercise3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mNm-7f-XsV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

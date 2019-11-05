@@ -35,8 +35,48 @@ class ViewController: UIViewController {
         pwTextField.delegate = self
         loginButton.setCornerRadius()
         loginButton.setBorderWidth()
+        
+        loginButton.titleLabel?.textColor = UIColor.mainColor
+    }
+    
+    
+    @IBAction func doLogin(_ sender: Any) {
+        guard let id = idTextField.text else { return }
+        guard let pwd = pwTextField.text else { return }
+        
+        LoginService.shared.login(id, pwd) {
+            data in
+            switch data {
+            case .success(let data):
+                // DataClass 에서 받은 유저 정보 반환
+                let user_data = data as! DataClass
+                // 사용자의 토큰, 이름, 이메일, 전화번호 받아오기
+                // 비밀번호는 안 받아와도 됨
+                UserDefaults.standard.set(user_data.userIdx, forKey: "token")
+                UserDefaults.standard.set(user_data.name, forKey: "name")
+                UserDefaults.standard.set(user_data.phone, forKey: "phone")
+                guard let main = self.storyboard?.instantiateViewController(withIdentifier: "main1") else { return }
+                self.present(main, animated: true)
+                
+            case .requestErr(let message):
+                let alertView = UIAlertController(title: "로그인 실패", message: "\(message)", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertView.addAction(alertAction)
+                self.present(alertView, animated: true, completion: nil)
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail: break
+                let alertView = UIAlertController(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertView.addAction(alertAction)
+                self.present(alertView, animated: true, completion: nil)
+            }
+        }
     }
 }
+
 
 extension ViewController: UITextFieldDelegate {
     private func addKeyboardObserver() {

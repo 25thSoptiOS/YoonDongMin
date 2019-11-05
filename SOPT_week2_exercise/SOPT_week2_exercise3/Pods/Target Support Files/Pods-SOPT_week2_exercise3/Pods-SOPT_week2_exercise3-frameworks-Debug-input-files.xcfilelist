@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-SOPT_week2_exercise3/Pods-SOPT_week2_exercise3-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework
