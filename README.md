@@ -146,7 +146,7 @@ extension MainViewController: UICollectionViewDelegate {}
 
 **실행화면**
 
-<img src="./Image/thirdWeek11.png" height="400px"/><img src="./Image/thirdWeek12.png" height="400px"/>
+<img src="./Image/ThirdWeek11.png" height="400px"/><img src="./Image/ThirdWeek12.png" height="400px"/>
 
 
 
