@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		950D840CE0D654173521C0E5 /* Pods_SOPT_week2_exercise3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFDE737AA5062B09140D929 /* Pods_SOPT_week2_exercise3.framework */; };
+		9D00BA192372B4170071DF18 /* Main2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D00BA182372B4170071DF18 /* Main2ViewController.swift */; };
+		9D00BA1B2372B6C60071DF18 /* TempCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D00BA1A2372B6C60071DF18 /* TempCell.swift */; };
 		9D425AFA236D4176009D7BBE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D425AF9236D4176009D7BBE /* NetworkResult.swift */; };
 		9D425AFC236D423F009D7BBE /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D425AFB236D423F009D7BBE /* APIConstants.swift */; };
 		9D425AFE236D4346009D7BBE /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D425AFD236D4346009D7BBE /* ResponseString.swift */; };
@@ -30,6 +32,8 @@
 		0EFDE737AA5062B09140D929 /* Pods_SOPT_week2_exercise3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_week2_exercise3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		125C32577B0B940E743D2329 /* Pods-SOPT_week2_exercise3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT_week2_exercise3.release.xcconfig"; path = "Target Support Files/Pods-SOPT_week2_exercise3/Pods-SOPT_week2_exercise3.release.xcconfig"; sourceTree = "<group>"; };
 		3FDFA0C5C45EFCAF223599E5 /* Pods-SOPT_week2_exercise3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT_week2_exercise3.debug.xcconfig"; path = "Target Support Files/Pods-SOPT_week2_exercise3/Pods-SOPT_week2_exercise3.debug.xcconfig"; sourceTree = "<group>"; };
+		9D00BA182372B4170071DF18 /* Main2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main2ViewController.swift; sourceTree = "<group>"; };
+		9D00BA1A2372B6C60071DF18 /* TempCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempCell.swift; sourceTree = "<group>"; };
 		9D425AF9236D4176009D7BBE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		9D425AFB236D423F009D7BBE /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		9D425AFD236D4346009D7BBE /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				9D425B43236DCFCD009D7BBE /* UIColor+Additions.swift */,
 				9DFBB1802351AE2F00A6E051 /* ViewController.swift */,
 				9DA4B867236412A100EE4E46 /* MainViewController.swift */,
+				9D00BA182372B4170071DF18 /* Main2ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				9D57B82D23641CC000749A33 /* BannerCell.swift */,
 				9D57B82F236420B700749A33 /* Banner.swift */,
 				9D425AFD236D4346009D7BBE /* ResponseString.swift */,
+				9D00BA1A2372B6C60071DF18 /* TempCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +294,8 @@
 				9DA4B868236412A100EE4E46 /* MainViewController.swift in Sources */,
 				9D425B02236D5D31009D7BBE /* SignupService.swift in Sources */,
 				9D57B82E23641CC000749A33 /* BannerCell.swift in Sources */,
+				9D00BA192372B4170071DF18 /* Main2ViewController.swift in Sources */,
+				9D00BA1B2372B6C60071DF18 /* TempCell.swift in Sources */,
 				9D425AFA236D4176009D7BBE /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

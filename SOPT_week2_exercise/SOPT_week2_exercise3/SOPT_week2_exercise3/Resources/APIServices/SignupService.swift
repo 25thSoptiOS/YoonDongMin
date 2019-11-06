@@ -13,36 +13,36 @@ struct SignupService {
     static let shared = SignupService()
     
     func signup(id: String, pwd: String, name: String, phone: String) {
-        let header: HTTPHeaders = [
-            "Content-Type" : "application/json"
-        ]
+//        let header: HTTPHeaders = [
+//            "Content-Type" : "application/json"
+//        ]
+//
+//        let body: Parameters = [
+//            "id": id,
+//            "pwd": pwd,
+//            "name": name,
+//            "phone": phone
+//        ]
         
-        let body: Parameters = [
-            "id": id,
-            "pwd": pwd,
-            "name": name,
-            "phone": phone
-        ]
-        
-        Alamofire.request(APIContstans.signupURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseData { response in
-            switch response.result {
-            case .success:
-                guard let value = response.result.value else { return }
-                guard let status = response.response?.statusCode else { return }
-                switch status {
-                case 200:
-                    let encoder = JSONEncoder()
-                    let result = try? encoder.encode(<#T##value: Encodable##Encodable#>)
-                case 400:
-                case 500:
-                default:
-                    break
-                }
-            case .failure(_):
-                <#code#>
-            @unknown default:
-                <#code#>
-            }
-        }
+//        Alamofire.request(APIContstans.signupURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseData { response in
+//            switch response.result {
+//            case .success:
+//                guard let value = response.result.value else { return }
+//                guard let status = response.response?.statusCode else { return }
+//                switch status {
+//                case 200:
+//                    let encoder = JSONEncoder()
+//                    let result = try? encoder.encode()
+//                case 400:
+//                case 500:
+//                default:
+//                    break
+//                }
+//            case .failure(_):
+//
+//            @unknown default:
+//
+//            }
+//        }
     }
 }
