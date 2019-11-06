@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CHIPageControl
 
 class Main2ViewController: UIViewController {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
+    @IBOutlet weak var paging: CHIPageControlAleppo!
     private var banners: [Banner] = []
     
     override func viewDidLoad() {
@@ -22,8 +24,8 @@ class Main2ViewController: UIViewController {
     
     private func setBanner() {
         let banner1 = Banner(bannerName: "mainImage")
-        let banner2 = Banner(bannerName: "mainImage01")
-        let banner3 = Banner(bannerName: "mainImage02")
+        let banner2 = Banner(bannerName: "mainImage02")
+        let banner3 = Banner(bannerName: "mainImage03")
         
         banners = [banner1, banner2, banner3]
     }
@@ -45,5 +47,15 @@ extension Main2ViewController: UICollectionViewDataSource {
 extension Main2ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+}
+
+extension Main2ViewController: UICollectionViewDelegate {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x
+        let w = scrollView.bounds.size.width
+        let currentPage = Int(ceil(x/w))
+        print(currentPage)
+        self.paging.set(progress: currentPage, animated: true)
     }
 }

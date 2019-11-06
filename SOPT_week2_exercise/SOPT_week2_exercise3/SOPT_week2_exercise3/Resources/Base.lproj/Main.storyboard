@@ -299,7 +299,7 @@
                                                     <constraint firstAttribute="height" constant="209" id="hqs-dM-bhh"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4gP-nQ-PM1">
-                                                    <size key="itemSize" width="414" height="209"/>
+                                                    <size key="itemSize" width="311" height="150"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -317,10 +317,10 @@
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="4cf-FL-ZXU" secondAttribute="bottom" id="77V-es-1fG"/>
-                                                                <constraint firstItem="4cf-FL-ZXU" firstAttribute="top" secondItem="I00-fR-Nvc" secondAttribute="top" id="BI0-zd-5uG"/>
-                                                                <constraint firstItem="4cf-FL-ZXU" firstAttribute="leading" secondItem="I00-fR-Nvc" secondAttribute="leading" id="N2i-9c-boZ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="4cf-FL-ZXU" secondAttribute="trailing" id="j0J-od-Jyl"/>
+                                                                <constraint firstAttribute="bottom" secondItem="4cf-FL-ZXU" secondAttribute="bottom" id="K7V-ro-8sy"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4cf-FL-ZXU" secondAttribute="trailing" id="UY8-37-62R"/>
+                                                                <constraint firstItem="4cf-FL-ZXU" firstAttribute="leading" secondItem="I00-fR-Nvc" secondAttribute="leading" id="Xm4-Up-EIM"/>
+                                                                <constraint firstItem="4cf-FL-ZXU" firstAttribute="top" secondItem="I00-fR-Nvc" secondAttribute="top" id="eTz-Bw-vJy"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="414" height="209"/>
@@ -339,6 +339,29 @@
                                             <constraint firstItem="1dH-Pe-Nz6" firstAttribute="width" secondItem="ohO-kd-Tu2" secondAttribute="width" id="hsg-Pc-YyY"/>
                                             <constraint firstItem="ZcM-aL-RF7" firstAttribute="top" secondItem="ohO-kd-Tu2" secondAttribute="top" constant="50" id="utU-Hd-Yar"/>
                                         </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTD-cS-GvW" customClass="CHIPageControlAleppo" customModule="CHIPageControl">
+                                        <rect key="frame" x="310" y="250" width="108" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="1" green="0.86274509803921573" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inactiveTransparency">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -363,6 +386,7 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="bannerCollectionView" destination="1dH-Pe-Nz6" id="qpJ-nZ-wzN"/>
+                        <outlet property="paging" destination="UTD-cS-GvW" id="GbE-18-tyD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eI-W2-98b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
