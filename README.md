@@ -2,7 +2,7 @@
 
 #### FirstWeek
 
-1. Soptstagram 화면 만들기
+1️⃣ Soptstagram 화면 만들기
 
 * **UI요소 둥글게 만들기**
 
@@ -20,9 +20,9 @@ profileImage.layer.masksToBounds = false // 위와 똑같은 내용
 
 
 
-####Second Week
+#### Second Week
 
-1. Segue이용 데이터 전달
+1️⃣ Segue이용 데이터 전달
 
 ```swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +45,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 
 
-2. Segue이용 하지 않고 데이터 전달
+2️⃣ Segue이용 하지 않고 데이터 전달
 
 ```swift
 guard let controller = self.storyboard?.instantiateViewController(identifier: "Recieve") as? RecieveViewController else { return } // instantiateViewController(identifier:) 메소드로 																						 "Recieve"을 Identifier로 가진 Controller 생성
@@ -63,7 +63,7 @@ self.present(controller, animated: true, completion: nil) // controller 화면�
 
 
 
-3. AutoLayOut이용 화면 구성
+3️⃣ AutoLayOut이용 화면 구성
 
 ```swift
 // 옵저버 패턴 활용 TextField 가리는 문제 해결
@@ -89,7 +89,7 @@ private func addKeyboardObserver() {
 
 
 
-4. Calculator
+4️⃣ Calculator
 
 * Custom View 만들어서 사용하기
 
@@ -125,6 +125,28 @@ class InputView: UIView {
 <img src="./Image/secondAssignment3.gif" height="400px"/>
 
 
+
+#### Third Week
+
+1️⃣ `ScrollView`, `CollectionView` 활용 Main View 만들기
+
+```swift
+class MainViewController: UIViewController {
+  @IBOutlet weak var bannerCollectionView: UICollectionView!
+  
+  override func viewDidLoad() {
+    bannerCollectionView.dataSource = self 						// Cell의 Data 관련
+    bannerCollectionView.delegate = self							// Cell의 크기, 이벤트등
+  }
+}
+
+extension MainViewController: UICollectionViewDataSource {} //꼭 구현해야하는 기능 구현
+extension MainViewController: UICollectionViewDelegate {}
+```
+
+**실행화면**
+
+<img src="./Image/thirdWeek11.png" height="400px"/><img src="./Image/thirdWeek12.png" height="400px"/>
 
 
 
