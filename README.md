@@ -135,8 +135,8 @@ class MainViewController: UIViewController {
   @IBOutlet weak var bannerCollectionView: UICollectionView!
   
   override func viewDidLoad() {
-    bannerCollectionView.dataSource = self 			// Cell의 Data 관련
-    bannerCollectionView.delegate = self				// Cell의 크기, 이벤트등
+    bannerCollectionView.dataSource = self 				// Cell의 Data 관련
+    bannerCollectionView.delegate = self					// Cell의 크기, 이벤트등
   }
 }
 
