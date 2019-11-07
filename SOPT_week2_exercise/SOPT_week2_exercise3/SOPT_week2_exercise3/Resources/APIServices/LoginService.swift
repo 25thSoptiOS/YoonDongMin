@@ -11,6 +11,32 @@ import Alamofire
 
 class LoginService {
     static let shared = LoginService() // 싱글톤 패턴
+    
+    private func makeParameter(_ id: String, _ pwd: String) -> Parameters {
+        return ["id": id, "pwd": pwd]
+    }
+    
+    func logintemp(id: String, pwd: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+        let dataRequest = Alamofire.request(APIContstans.loginURL, method: .post, parameters: makeParameter(id, pwd), encoding: JSONEncoding.default, headers: DataHeader.json.getHeader())
+        
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success:
+                guard let statusCode = dataResponse.response?.statusCode else { return }
+                self.judge(by: statusCode)
+            case .failure: print("")
+            }
+        }
+    }
+    
+    private func judge(by statusCode: Int) {
+        switch statusCode {
+        case 200: print("")
+        case 400: print("")
+        case 500: print("")
+        default: break
+        }
+    }
 
     func login(_ id: String, _ pwd: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let header: HTTPHeaders = [
