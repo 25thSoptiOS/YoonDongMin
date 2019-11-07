@@ -16,7 +16,7 @@ profileImage.layer.masksToBounds = false // 위와 똑같은 내용
 
 **실행화면**
 
-<img src="./Image/firstAssignment1.gif" height="400px"/><img src="./Image/firstAssignment2.gif" height="400px"/>
+<img src="./Image/firstAssignment1.png" height="400px"/><img src="./Image/firstAssignment2.png" height="400px"/>
 
 
 
@@ -41,7 +41,9 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 **실행화면**
 
-<img src="./Image/secondExercise1.gif" height="400px"/>
+<img src="./Image/secondExercise1_1.png" width = "200" height="350px"/><img src="./Image/secondExercise1_2.png" width="200px" height="350px"/><img src="./Image/secondExercise1_3.png" width = "200" height="350px"/>
+
+
 
 
 
@@ -59,7 +61,7 @@ self.present(controller, animated: true, completion: nil) // controller 화면�
 
 **실행화면**
 
-<img src="./Image/secondExercise2.gif" height="400px"/>
+<img src="./Image/secondExercise2_1.png" height="400px"/><img src="./Image/secondExercise2_2.png" height="400px"/>
 
 
 
@@ -86,6 +88,8 @@ private func addKeyboardObserver() {
 **실행 화면**
 
 <img src="./Image/secondExercise3_1.png" height="400px"/><img src="./Image/secondExercise3_2.png" height="400px"/>
+
+
 
 
 
@@ -122,8 +126,6 @@ class InputView: UIView {
 
 <img src="./Image/secondAssignment1.png" height="400px"/><img src="./Image/secondAssignment2.png" height="400px"/>
 
-<img src="./Image/secondAssignment3.gif" height="400px"/>
-
 
 
 #### Third Week
@@ -151,6 +153,26 @@ extension MainViewController: UICollectionViewDelegate {}
 
 
 
+
+#### Fourth Week
+
+1️⃣ `Alamorfire` 이용 서버 통신
+
+> ✅ Login Service
+
+**실행화면**
+
+<img src="./Image/fourthExercise1_1.png" height="400px"/><img src="./Image/fourthExercise1_2.png" height="400px"/>
+
+
+
+> ✅ Signup Service ( 다음과 같이 Signup 실행 )
+
+![screen](./image/fourthExercise1_3.png)
+
+**실행화면**
+
+<img src="./Image/fourthExercise1_4.png" height="400px"/><img src="./Image/fourthExercise1_5.png" height="400px"/>
 
 
 

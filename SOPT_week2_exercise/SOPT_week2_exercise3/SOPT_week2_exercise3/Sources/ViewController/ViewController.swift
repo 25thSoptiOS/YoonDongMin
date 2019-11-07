@@ -78,7 +78,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doSignup(_ sender: Any) {
-        SignupService.shared.signup(id: "dongmin", pwd: "1111", name: "윤동민", phone: "1111") { networkResult in
+        SignupService.shared.signup(id: "dongmin123", pwd: "1111", name: "윤동민", phone: "1111") { networkResult in
             switch networkResult {
             case .success(let userData): print(userData)
             case .requestErr(let message): print(message)
