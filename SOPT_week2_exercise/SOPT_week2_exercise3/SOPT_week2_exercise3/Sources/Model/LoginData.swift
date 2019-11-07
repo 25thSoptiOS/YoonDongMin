@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ResponseString: Codable {
+struct LoginData: Codable {
     let success: Bool
     let message: String
     let data: DataClass?

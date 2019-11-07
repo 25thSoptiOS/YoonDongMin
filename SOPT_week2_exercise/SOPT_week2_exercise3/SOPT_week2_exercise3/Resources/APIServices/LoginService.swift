@@ -44,7 +44,7 @@ class LoginService {
     
     private func isUser(_ value: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let getData = try? decoder.decode(ResponseString.self, from: value) else { return .pathErr }
+        guard let getData = try? decoder.decode(LoginData.self, from: value) else { return .pathErr }
         guard let userInfo = getData.data else { return .requestErr(getData.message) }
         if getData.success { return .success(userInfo) }
         else { return .requestErr(getData.message) }

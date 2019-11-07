@@ -9,5 +9,5 @@
 import UIKit
 
 class BannerCell: UICollectionViewCell {
-    @IBOutlet weak var banner: UIImageView!
+    @IBOutlet weak var bannerImage: UIImageView!
 }
