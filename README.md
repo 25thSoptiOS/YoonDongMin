@@ -168,7 +168,7 @@ extension MainViewController: UICollectionViewDelegate {}
 
 > ✅ Signup Service ( 다음과 같이 Signup 실행 )
 
-![screen](./image/fourthExercise1_3.png)
+![screen](./Image/fourthExercise1_3.png)
 
 **실행화면**
 
