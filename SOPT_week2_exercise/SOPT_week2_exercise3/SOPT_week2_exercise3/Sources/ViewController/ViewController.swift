@@ -44,8 +44,7 @@ class ViewController: UIViewController {
         guard let id = idTextField.text else { return }
         guard let pwd = pwTextField.text else { return }
         
-        LoginService.shared.login(id, pwd) {
-            data in
+        LoginService.shared.login(id, pwd) { data in
             switch data {
             case .success(let data):
                 // DataClass 에서 받은 유저 정보 반환
@@ -56,9 +55,11 @@ class ViewController: UIViewController {
                 UserDefaults.standard.set(user_data.name, forKey: "name")
                 UserDefaults.standard.set(user_data.phone, forKey: "phone")
                 guard let main = self.storyboard?.instantiateViewController(withIdentifier: "main1") else { return }
+                main.modalPresentationStyle = .fullScreen
                 self.present(main, animated: true)
                 
             case .requestErr(let message):
+                print("requestErr")
                 let alertView = UIAlertController(title: "로그인 실패", message: "\(message)", preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
                 alertView.addAction(alertAction)
@@ -67,7 +68,7 @@ class ViewController: UIViewController {
                 print(".pathErr")
             case .serverErr:
                 print(".serverErr")
-            case .networkFail: break
+            case .networkFail:
                 let alertView = UIAlertController(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.", preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
                 alertView.addAction(alertAction)
@@ -76,7 +77,6 @@ class ViewController: UIViewController {
         }
     }
 }
-
 
 extension ViewController: UITextFieldDelegate {
     private func addKeyboardObserver() {

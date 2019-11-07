@@ -163,7 +163,7 @@
         <!--Home-->
         <scene sceneID="9yU-ec-9Kl">
             <objects>
-                <viewController id="k6H-uq-A8e" customClass="MainViewController" customModule="SOPT_week2_exercise3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main1" id="k6H-uq-A8e" customClass="MainViewController" customModule="SOPT_week2_exercise3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sZQ-Wj-6o8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
