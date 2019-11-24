@@ -190,3 +190,21 @@ extension MainViewController: UICollectionViewDelegate {}
 
 
 
+#### Six Week
+
+1️⃣ 서버 합동 세미나
+
+> ✅ `따릉이` 뷰에 맞는 서버 데이터 통신하기
+>
+> 1. 구현 데이터
+>
+>    ➡️ Login View 구현해 로그인 및 회원가입 구현
+>
+>    ➡️ 회원정보 관리 메뉴 클릭 시, 간단한 개인 정보 받아오기
+>
+>    ➡️ 홈 화면에서 각 따릉이 Index 별로 자전거 수 받아오기
+
+
+
+
+
