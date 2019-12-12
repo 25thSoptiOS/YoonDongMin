@@ -208,3 +208,19 @@ extension MainViewController: UICollectionViewDelegate {}
 
 
 
+#### Last Week
+
+1️⃣ SNS 연동 로그인 구현
+
+> ✅ FaceBook 연동 로그인
+
+
+
+**실행화면**
+
+<img src="./Image/lastweek1.png" width = "200" height="350px"/><img src="./Image/lastweek2.png" width = "200" height="350px"/><img src="./Image/lastweek3.png" width = "200" height="350px"/>
+
+
+
+
+
