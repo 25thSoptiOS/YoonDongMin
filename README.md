@@ -213,8 +213,10 @@ extension MainViewController: UICollectionViewDelegate {}
 1️⃣ SNS 연동 로그인 구현
 
 > ✅ FaceBook 연동 로그인
-
-
+>
+> 1. 구현
+>
+> ➡️ Facebook 개발자 문서 확인하여 차례대로 따라하기 (카카오톡, 네이버 등)
 
 **실행화면**
 
